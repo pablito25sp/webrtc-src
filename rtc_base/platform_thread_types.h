@@ -10,7 +10,7 @@
 
 #ifndef RTC_BASE_PLATFORM_THREAD_TYPES_H_
 #define RTC_BASE_PLATFORM_THREAD_TYPES_H_
-
+#define WEBRTC_MAC
 // clang-format off
 // clang formating would change include order.
 #if defined(WEBRTC_WIN)
@@ -39,9 +39,9 @@ typedef DWORD PlatformThreadRef;
 typedef zx_handle_t PlatformThreadId;
 typedef zx_handle_t PlatformThreadRef;
 #elif defined(WEBRTC_POSIX)
+#endif
 typedef pid_t PlatformThreadId;
 typedef pthread_t PlatformThreadRef;
-#endif
 
 // Retrieve the ID of the current thread.
 PlatformThreadId CurrentThreadId();

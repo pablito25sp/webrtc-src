@@ -16,7 +16,7 @@
 #elif defined(WEBRTC_POSIX)
 #include <pthread.h>
 #else
-#error "Must define either WEBRTC_WIN or WEBRTC_POSIX."
+// #error "Must define either WEBRTC_WIN or WEBRTC_POSIX."
 #endif
 
 namespace rtc {
