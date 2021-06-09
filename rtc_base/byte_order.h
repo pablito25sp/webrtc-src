@@ -10,7 +10,6 @@
 
 #ifndef RTC_BASE_BYTE_ORDER_H_
 #define RTC_BASE_BYTE_ORDER_H_
-#define WEBRTC_MAC
 
 #include <stdint.h>
 
@@ -20,7 +19,7 @@
 
 #include "rtc_base/system/arch.h"
 
-#if defined(WEBRTC_MAC)
+// #if defined(WEBRTC_MAC)
 #include <libkern/OSByteOrder.h>
 
 #define htobe16(v) OSSwapHostToBigInt16(v)
@@ -37,7 +36,8 @@
 #define le32toh(v) OSSwapLittleToHostInt32(v)
 #define le64toh(v) OSSwapLittleToHostInt64(v)
 
-#elif defined(WEBRTC_WIN) || defined(__native_client__)
+// #elif defined(WEBRTC_WIN) || defined(__native_client__)
+#if defined(WEBRTC_WIN) || defined(__native_client__)
 
 #if defined(WEBRTC_WIN)
 #include <stdlib.h>
