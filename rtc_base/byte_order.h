@@ -85,8 +85,8 @@
 #define htobe64(v) (v)
 #define be64toh(v) (v)
 #endif  // defined(__native_client__)
-#else
-#error WEBRTC_ARCH_BIG_ENDIAN or WEBRTC_ARCH_LITTLE_ENDIAN must be defined.
+// #else
+// #error WEBRTC_ARCH_BIG_ENDIAN or WEBRTC_ARCH_LITTLE_ENDIAN must be defined.
 #endif  // defined(WEBRTC_ARCH_LITTLE_ENDIAN)
 
 #elif defined(WEBRTC_POSIX)
